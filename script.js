@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
-    const timerDisplay = document.querySelector('#time');
+    // const timerDisplay = document.querySelector('#time');
     let firstCard, secondCard;
     let lockBoard = false;
-    let timeLeft = 20;
+    // let timeLeft = 20;
     let timerInterval;
 
     function shuffleCards() {
         const gameBoard = document.querySelector('.game-board');
-        const shuffledCards = Array.from(cards).sort(() => Math.random() - 0.5);
+        const shuffledCards = Array.from(cards).sort(() => Math.random() - 0.2);
         shuffledCards.forEach(card => gameBoard.appendChild(card));
     }
 
