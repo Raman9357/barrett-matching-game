@@ -61,31 +61,31 @@ document.addEventListener('DOMContentLoaded', () => {
         lockBoard = false;
     }
 
-    function startTimer() {
-        timerInterval = setInterval(() => {
-            timeLeft--;
-            timerDisplay.textContent = timeLeft;
+    // function startTimer() {
+    //     timerInterval = setInterval(() => {
+    //         timeLeft--;
+    //         timerDisplay.textContent = timeLeft;
 
-            if (timeLeft === 0) {
-                clearInterval(timerInterval);
-                alert('Game Over! Time is up.');
-                resetGame();
-            }
-        }, 1000);
-    }
+    //         if (timeLeft === 0) {
+    //             clearInterval(timerInterval);
+    //             alert('Game Over! Time is up.');
+    //             resetGame();
+    //         }
+    //     }, 1000);
+    // }
 
     function resetGame() {
         cards.forEach(card => card.classList.remove('flipped'));
         cards.forEach(card => card.addEventListener('click', flipCard));
         [firstCard, secondCard] = [null, null];
         lockBoard = false;
-        timeLeft = 20;
-        timerDisplay.textContent = timeLeft;
+        // timeLeft = 20;
+        // timerDisplay.textContent = timeLeft;
         shuffleCards();
-        startTimer();
+        // startTimer();
     }
 
     cards.forEach(card => card.addEventListener('click', flipCard));
     shuffleCards();
-    startTimer();
+    // startTimer();
 });
